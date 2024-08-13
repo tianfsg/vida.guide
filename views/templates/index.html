@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViDa.guide - Portfolio</title>
+    <meta name="description" content="Soy Sebastián Fco. Gutiérrez Rojas, un apasionado Ingeniero de Software especializado en Big Data y Deep Learning.">
+    <meta name="keywords" content="portfolio, Sebastián Fco. Gutiérrez Rojas, software engineer, big data, deep learning">
+    <link href="/static/css/output.css" rel="stylesheet">
+</head>
+<body class="gradient-background text-white">
+
+    <!-- Main Container with Parallax Effect -->
+    <div class="main-content">
+        <!-- Navbar -->
+        <nav class="bg-gray-800 bg-opacity-70 p-4 flex justify-between items-center sticky top-0 z-50 shadow-lg">
+            <div class="text-3xl font-bold">ViDa.guide</div>
+            <div class="space-x-8">
+                <a href="#about" class="hover:text-gray-300" aria-label="About Section">About</a>
+                <a href="#projects" class="hover:text-gray-300" aria-label="Projects Section">Projects</a>
+                <a href="#contact" class="hover:text-gray-300" aria-label="Contact Section">Contact</a>
+            </div>
+
+            <!-- Botón de Idioma en el Navbar -->
+            <div class="relative">
+                <button id="languageButton" class="btn btn-sm btn-outline flex items-center space-x-2" aria-label="Language Selection">
+                    <img src="/static/images/flags/EN/24-2.png" alt="English" class="w-5 h-5">
+                    <span>EN</span>
+                </button>
+
+                <!-- Menú Desplegable de Idiomas -->
+                <div id="languageMenu" class="hidden absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg overflow-hidden z-50">
+                    <a href="#" onclick="setLanguage('EN')" class="flex items-center px-4 py-2 hover:bg-gray-200">
+                        <img src="/static/images/flags/EN/24-2.png" alt="English" class="w-5 h-5 mr-2">
+                        <span class="text-black">English</span>
+                    </a>
+                    <a href="#" onclick="setLanguage('ES')" class="flex items-center px-4 py-2 hover:bg-gray-200">
+                        <img src="/static/images/flags/ES/24.png" alt="Español" class="w-5 h-5 mr-2">
+                        <span class="text-black">Español</span>
+                    </a>
+                    <a href="#" onclick="setLanguage('DE')" class="flex items-center px-4 py-2 hover:bg-gray-200">
+                        <img src="/static/images/flags/DE/24-3.png" alt="Deutsch" class="w-5 h-5 mr-2">
+                        <span class="text-black">Deutsch</span>
+                    </a>                
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Sections -->
+        <main class="flex flex-col items-center space-y-16 py-12 px-4">
+            <!-- Section 1: About Me -->
+            <section id="about" class="w-full max-w-6xl bg-white bg-opacity-90 backdrop-blur-lg rounded-lg shadow-lg p-12 flex flex-col md:flex-row items-center text-gray-800">
+                <img src="./static/images/profile.jpeg" alt="Foto de Sebastián Fco. Gutiérrez Rojas" class="w-64 h-64 rounded-full shadow-lg mb-8 md:mb-0 md:mr-8">
+                <div>
+                    <h2 class="about-header text-4xl font-bold mb-4 text-center md:text-left">About Me</h2>
+                    <p class="description text-lg leading-relaxed">
+                        Soy Sebastián Fco. Gutiérrez Rojas...
+                    </p>                
+                </div>
+            </section>
+
+            <!-- Section 2: Projects -->
+            <section id="projects" class="w-screen bg-white text-gray-800 py-12 flex justify-center">
+                <div class="max-w-7xl w-full px-4">
+                    <h2 class="projects-header text-4xl font-bold mb-6 text-center">Projects</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Project Card -->
+                        <div class="card bg-base-100 shadow-xl image-full">
+                            <figure><img src="https://via.placeholder.com/400x200" alt="Project Image" /></figure>
+                            <div class="card-body">
+                                <h2 class="card-title">Project 1</h2>
+                                <p>Descripción del proyecto.</p>
+                                <div class="card-actions justify-end">
+                                    <a href="#" class="btn btn-primary">Ver en GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more project cards here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Contact -->
+            <section id="contact" class="w-full max-w-6xl bg-white bg-opacity-90 backdrop-blur-lg rounded-lg shadow-lg p-12 text-gray-800">
+                <h2 class="contact-header text-4xl font-bold mb-6">Contact Me</h2>
+                <button class="btn btn-primary" onclick="document.getElementById('contactModal').showModal()">Ver mis Redes</button>
+            </section>
+        </main>
+
+        <!-- Contact Modal -->
+        <dialog id="contactModal" class="modal">
+            <form method="dialog" class="modal-box">
+                <button class="btn btn-sm btn-circle btn-ghost absolute right-4 top-4">✕</button>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <h3 class="text-xl font-bold">Mis Redes</h3>
+                        <ul class="list-none space-y-2">
+                            <li><a href="#" class="link link-hover text-blue-500">GitHub</a></li>
+                            <li><a href="#" class="link link-hover text-blue-500">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">Contact Info</h3>
+                        <p>Email: <a href="mailto:example@example.com" class="link link-hover text-blue-500">example@example.com</a></p>
+                        <p>Teléfono: <a href="tel:+1234567890" class="link link-hover text-blue-500">+12 345 678 90</a></p>
+                    </div>
+                </div>
+            </form>
+        </dialog>
+    </div> <!-- End of Main Content -->
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Sección de enlaces -->
+                <div class="flex space-x-4 mb-4 md:mb-0">
+                    <a href="#" class="hover:text-white">Privacidad</a>
+                    <a href="#" class="hover:text-white">Cookies</a>
+                    <a href="#" class="hover:text-white">Términos y Condiciones</a>
+                    <a href="#" class="hover:text-white">Aviso Legal</a>
+                </div>
+            </div>
+            <!-- Firma -->
+            <div class="text-center md:text-right">
+                <p>© 2024. Derechos Reservados. Creado por <span class="font-bold">Sebastián Fco. Gutiérrez Rojas</span>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Definimos las traducciones
+        const translations = {
+            en: {
+                about: "About Me",
+                projects: "Projects",
+                contact: "Contact Me",
+                description: "I'm Sebastián Fco. Gutiérrez Rojas, a passionate Software Engineer specializing in Big Data and Deep Learning. I love solving complex problems and creating innovative solutions...",
+                lang: "EN",
+                flag: "/static/images/flags/EN/24-2.png"
+            },
+            es: {
+                about: "Sobre Mí",
+                projects: "Proyectos",
+                contact: "Contáctame",
+                description: "Soy Sebastián Fco. Gutiérrez Rojas, un apasionado Ingeniero de Software especializado en Big Data y Deep Learning. Me encanta resolver problemas complejos y crear soluciones innovadoras...",
+                lang: "ES",
+                flag: "/static/images/flags/ES/24.png"
+            },
+            de: {
+                about: "Über Mich",
+                projects: "Projekte",
+                contact: "Kontaktiere Mich",
+                description: "Ich bin Sebastián Fco. Gutiérrez Rojas, ein leidenschaftlicher Softwareingenieur, der sich auf Big Data und Deep Learning spezialisiert hat. Ich liebe es, komplexe Probleme zu lösen und innovative Lösungen zu entwickeln...",
+                lang: "DE",
+                flag: "/static/images/flags/DE/24-3.png"
+            }
+        };
+
+        // Función para actualizar el contenido según el idioma
+        function setLanguage(language) {
+            const translation = translations[language.toLowerCase()];
+
+            if (!translation) {
+                console.error(`No translation found for language: ${language}`);
+                return;
+            }
+
+            // Actualiza los textos en la página
+            document.querySelector('.about-header').textContent = translation.about;
+            document.querySelector('.projects-header').textContent = translation.projects;
+            document.querySelector('.contact-header').textContent = translation.contact;
+            document.querySelector('.description').textContent = translation.description;
+
+            // Cambia la bandera y el texto del botón de idioma
+            document.querySelector('#languageButton img').src = translation.flag;
+            document.querySelector('#languageButton span').textContent = translation.lang;
+
+            // Guarda el idioma en localStorage
+            localStorage.setItem('preferredLanguage', language);
+
+            // Cierra el menú de idiomas
+            document.getElementById('languageMenu').classList.add('hidden');
+        }
+
+        // Muestra y oculta el menú desplegable de idiomas
+        document.getElementById('languageButton').addEventListener('click', function() {
+            document.getElementById('languageMenu').classList.toggle('hidden');
+        });
+
+        // Cierra el menú si se hace clic fuera de él
+        window.addEventListener('click', function(e) {
+            if (!document.getElementById('languageButton').contains(e.target)) {
+                document.getElementById('languageMenu').classList.add('hidden');
+            }
+        });
+
+        // Verifica el idioma preferido al cargar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            const preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
+            setLanguage(preferredLanguage);
+        });
+    </script>
+</body>
+</html>

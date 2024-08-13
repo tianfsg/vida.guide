@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    font-size: 14px;
+    /* Tamaño de fuente más pequeño para un estilo minimalista */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(to bottom,
+            hsla(230, 59%, 25%, 1) 0%,
+            hsla(359, 73%, 39%, 1) 50%,
+            hsla(32, 97%, 59%, 1) 100%);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+nav {
+    margin: 0;
+    padding: 0.5rem 2rem;
+    /* Padding reducido para hacer el nav más compacto */
+    position: fixed;
+    /* Fijamos el nav a la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* El nav ocupa todo el ancho de la pantalla */
+    z-index: 3;
+    background-color: rgba(26, 32, 44, 0.9);
+    /* Fondo semitransparente para visibilidad */
+    display: flex;
+    justify-content: space-between;
+    /* Espaciado uniforme entre los elementos */
+    align-items: center;
+    font-size: 0.875rem;
+    /* Tamaño de fuente más pequeño */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil para separarlo del contenido */
+}
+
+nav .text-3xl {
+    font-size: 1.25rem;
+    /* Reducimos un poco más el tamaño de la marca */
+    margin: 0;
+    /* Eliminamos márgenes extra */
+}
+
+nav .space-x-8 a {
+    margin-left: 1rem;
+    /* Ajustamos margen entre los enlaces para alinearlos mejor */
+    padding: 0.25rem;
+    /* Reducimos el padding de los enlaces para hacerlos más compactos */
+    text-decoration: none;
+    color: #ffffff;
+    /* Aseguramos que el texto sea blanco */
+}
+
+
+#languageButton {
+    padding: 0.25rem 0.5rem;
+    /* Reducimos el tamaño del botón de idioma */
+    border-radius: 0.25rem;
+    /* Redondeamos ligeramente las esquinas */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Fondo semitransparente para el botón */
+    color: white;
+}
+
+#languageMenu {
+    margin-top: 0.25rem;
+    /* Espacio pequeño entre el botón y el menú desplegable */
+    background-color: white;
+    border-radius: 0.25rem;
+    /* Redondeamos las esquinas del menú */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra ligera para el menú */
+    overflow: hidden;
+}
+
+#languageMenu a {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    /* Padding más pequeño para compactar el menú */
+    color: black;
+    /* Texto en negro */
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#languageMenu a:hover {
+    background-color: #f0f0f0;
+    /* Color de fondo al pasar el mouse */
+}
+
+#languageMenu img {
+    margin-right: 0.5rem;
+    /* Espacio entre la imagen y el texto */
+    width: 20px;
+    /* Tamaño de la bandera ajustado */
+}
+
+.main-content {
+    flex: 1;
+    width: 100%;
+    margin: 0;
+    z-index: 2;
+}
+
+section {
+    margin-bottom: 4rem;
+    /* Añadimos más espacio entre las secciones */
+}
+
+h2 {
+    font-size: 2rem;
+    /* Tamaño de encabezado más pequeño */
+}
+
+p {
+    font-size: 0.875rem;
+    /* Tamaño de texto más pequeño para el contenido */
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #1a202c;
+    padding: 3rem 2rem;
+    /* Espacioso pero no demasiado grande */
+    text-align: center;
+    color: #cbd5e0;
+    width: 100%;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 3;
+    font-size: 0.875rem;
+    /* Tamaño de fuente consistente con el resto de la página */
+    margin-top: auto;
+}
