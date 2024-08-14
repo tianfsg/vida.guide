@@ -13,21 +13,33 @@
     <!-- Main Container with Parallax Effect -->
     <div class="main-content">
         <!-- Navbar -->
-        <nav class="bg-gray-800 bg-opacity-70 p-4 flex justify-between items-center sticky top-0 z-50 shadow-lg">
+        <nav class="fixed top-0 left-0 w-full z-30 bg-gray-900 bg-opacity-90 flex justify-between items-center p-4 shadow-lg">
             <div class="text-3xl font-bold">ViDa.guide</div>
-            <div class="space-x-8">
-                <a href="#about" class="hover:text-gray-300" aria-label="About Section">About</a>
-                <a href="#projects" class="hover:text-gray-300" aria-label="Projects Section">Projects</a>
-                <a href="#contact" class="hover:text-gray-300" aria-label="Contact Section">Contact</a>
+            
+            <!-- Menu Icon for mobile -->
+            <div class="md:hidden">
+                <button id="menuButton" class="focus:outline-none">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
             </div>
 
-            <!-- Botón de Idioma en el Navbar -->
+            <!-- Menu Links -->
+            <div id="menu" class="hidden md:flex flex-1 justify-center space-x-8">
+                <a href="#home" class="hover:text-gray-300" aria-label="Home Section">Home</a>
+                <a href="#about" class="hover:text-gray-300" aria-label="About Section">About</a>
+                <a href="#skills" class="hover:text-gray-300" aria-label="Skills Section">Skills</a>
+                <a href="#portfolio" class="hover:text-gray-300" aria-label="Portfolio Section">Portfolio</a>
+                <a href="#contact" class="hover:text-gray-300" aria-label="Contact Section">Contact</a>
+            </div>
+            
+            <!-- Language Button -->
             <div class="relative">
-                <button id="languageButton" class="btn btn-sm btn-outline flex items-center space-x-2" aria-label="Language Selection">
-                    <img src="/static/images/flags/EN/24-2.png" alt="English" class="w-5 h-5">
-                    <span>EN</span>
+                <button id="languageButton" class="btn btn-sm btn-outline flex items-center space-x-2 text-white" aria-label="Language Selection">
+                    <img src="/static/images/flags/ES/24.png" alt="Español" class="w-5 h-5">
+                    <span>ES</span>
                 </button>
-
                 <!-- Menú Desplegable de Idiomas -->
                 <div id="languageMenu" class="hidden absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg overflow-hidden z-50">
                     <a href="#" onclick="setLanguage('EN')" class="flex items-center px-4 py-2 hover:bg-gray-200">
@@ -47,15 +59,27 @@
         </nav>
 
         <!-- Main Content Sections -->
-        <main class="flex flex-col items-center space-y-16 py-12 px-4">
+        <main class="flex flex-col items-center space-y-4 py-12 pt-48 px-4">
             <!-- Section 1: About Me -->
-            <section id="about" class="w-full max-w-6xl bg-white bg-opacity-90 backdrop-blur-lg rounded-lg shadow-lg p-12 flex flex-col md:flex-row items-center text-gray-800">
-                <img src="./static/images/profile.jpeg" alt="Foto de Sebastián Fco. Gutiérrez Rojas" class="w-64 h-64 rounded-full shadow-lg mb-8 md:mb-0 md:mr-8">
-                <div>
-                    <h2 class="about-header text-4xl font-bold mb-4 text-center md:text-left">About Me</h2>
-                    <p class="description text-lg leading-relaxed">
-                        Soy Sebastián Fco. Gutiérrez Rojas...
-                    </p>                
+            <section id="about" class="flex flex-col items-center justify-center py-12">
+                <div class="bg-gray-900 bg-opacity-70 p-8 rounded-lg shadow-lg flex flex-col-reverse md:flex-row items-center justify-between text-center md:text-left space-y-8 md:space-y-0 mx-auto" style="min-width: 300px; max-width: 1200px; width: 100%; min-height: 410px;">
+                    <div class="md:w-1/2 pl-4 pr-4 md:pl-8">
+                        <h1 class="text-2xl md:text-4xl font-bold about-header text-white">Hi, I'm</h1>
+                        <h2 class="text-4xl md:text-6xl font-bold text-white name mt-2 md:mt-4">Sebastián Fco. Gutiérrez Rojas</h2>
+                        <h3 class="text-xl md:text-3xl text-yellow-400 role mt-1 md:mt-2">Software Engineer</h3>
+                        <p class="text-sm md:text-lg text-white max-w-md description mt-2 md:mt-4">
+                            Specialist in Big Data and Deep Learning. I love solving complex problems and creating innovative solutions...
+                        </p>
+                        <a href="#" class="mt-4 md:mt-6 inline-block bg-yellow-500 text-white px-4 py-2 md:px-6 md:py-3 rounded-lg shadow hover:bg-yellow-400 transition hire-me-button">
+                            Hire Me
+                        </a>
+                    </div>
+                    
+                    <div class="md:w-1/2 flex justify-center md:justify-end pr-4 md:pr-8 mb-4 md:mb-0">
+                        <div class="relative">
+                            <img src="/static/images/profile.jpeg" alt="Photo" class="w-40 h-40 md:w-64 md:h-64 rounded-full shadow-lg">
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -85,32 +109,31 @@
                 <h2 class="contact-header text-4xl font-bold mb-6">Contact Me</h2>
                 <button class="btn btn-primary" onclick="document.getElementById('contactModal').showModal()">Ver mis Redes</button>
             </section>
-        </main>
+        </main> <!-- End of Main Content -->
 
-        <!-- Contact Modal -->
-        <dialog id="contactModal" class="modal">
-            <form method="dialog" class="modal-box">
-                <button class="btn btn-sm btn-circle btn-ghost absolute right-4 top-4">✕</button>
-                <div class="grid grid-cols-2 gap-4">
-                    <div>
-                        <h3 class="text-xl font-bold">Mis Redes</h3>
-                        <ul class="list-none space-y-2">
-                            <li><a href="#" class="link link-hover text-blue-500">GitHub</a></li>
-                            <li><a href="#" class="link link-hover text-blue-500">LinkedIn</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold">Contact Info</h3>
-                        <p>Email: <a href="mailto:example@example.com" class="link link-hover text-blue-500">example@example.com</a></p>
-                        <p>Teléfono: <a href="tel:+1234567890" class="link link-hover text-blue-500">+12 345 678 90</a></p>
-                    </div>
+    <!-- Contact Modal -->
+    <dialog id="contactModal" class="modal">
+        <form method="dialog" class="modal-box">
+            <button class="btn btn-sm btn-circle btn-ghost absolute right-4 top-4">✕</button>
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <h3 class="text-xl font-bold">Mis Redes</h3>
+                    <ul class="list-none space-y-2">
+                        <li><a href="#" class="link link-hover text-blue-500">GitHub</a></li>
+                        <li><a href="#" class="link link-hover text-blue-500">LinkedIn</a></li>
+                    </ul>
                 </div>
-            </form>
-        </dialog>
-    </div> <!-- End of Main Content -->
+                <div>
+                    <h3 class="text-xl font-bold">Contact Info</h3>
+                    <p>Email: <a href="mailto:example@example.com" class="link link-hover text-blue-500">example@example.com</a></p>
+                    <p>Teléfono: <a href="tel:+1234567890" class="link link-hover text-blue-500">+12 345 678 90</a></p>
+                </div>
+            </div>
+        </form>
+    </dialog>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-8">
+    <footer class="bg-gray-900 text-gray-400 py-12 px-8 text-center shadow-md w-full">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <!-- Sección de enlaces -->
@@ -133,26 +156,29 @@
         // Definimos las traducciones
         const translations = {
             en: {
-                about: "About Me",
-                projects: "Projects",
-                contact: "Contact Me",
-                description: "I'm Sebastián Fco. Gutiérrez Rojas, a passionate Software Engineer specializing in Big Data and Deep Learning. I love solving complex problems and creating innovative solutions...",
+                header: "Hi, I'm",
+                name: "Sebastian Fco. Gutierrez Rojas",
+                role: "Software Engineer",
+                description: "Specialist in Big Data and Deep Learning. I love solving complex problems and creating innovative solutions...",
+                hireMe: "Hire Me",
                 lang: "EN",
                 flag: "/static/images/flags/EN/24-2.png"
             },
             es: {
-                about: "Sobre Mí",
-                projects: "Proyectos",
-                contact: "Contáctame",
-                description: "Soy Sebastián Fco. Gutiérrez Rojas, un apasionado Ingeniero de Software especializado en Big Data y Deep Learning. Me encanta resolver problemas complejos y crear soluciones innovadoras...",
+                header: "Hola, Soy",
+                name: "Sebastián Fco. Gutiérrez Rojas",
+                role: "Ingeniero de Software",
+                description: "Especialista en Big Data y Deep Learning. Me encanta resolver problemas complejos y crear soluciones innovadoras...",
+                hireMe: "Contrátame",
                 lang: "ES",
                 flag: "/static/images/flags/ES/24.png"
             },
             de: {
-                about: "Über Mich",
-                projects: "Projekte",
-                contact: "Kontaktiere Mich",
-                description: "Ich bin Sebastián Fco. Gutiérrez Rojas, ein leidenschaftlicher Softwareingenieur, der sich auf Big Data und Deep Learning spezialisiert hat. Ich liebe es, komplexe Probleme zu lösen und innovative Lösungen zu entwickeln...",
+                header: "Hi, Ich bin",
+                name: "Sebastián Fco. Gutiérrez Rojas",
+                role: "Softwareingenieur",
+                description: "Spezialist für Big Data und Deep Learning. Ich liebe es, komplexe Probleme zu lösen und innovative Lösungen zu schaffen...",
+                hireMe: "Stellen Sie mich ein",
                 lang: "DE",
                 flag: "/static/images/flags/DE/24-3.png"
             }
@@ -161,25 +187,26 @@
         // Función para actualizar el contenido según el idioma
         function setLanguage(language) {
             const translation = translations[language.toLowerCase()];
-
+        
             if (!translation) {
                 console.error(`No translation found for language: ${language}`);
                 return;
             }
-
+        
             // Actualiza los textos en la página
-            document.querySelector('.about-header').textContent = translation.about;
-            document.querySelector('.projects-header').textContent = translation.projects;
-            document.querySelector('.contact-header').textContent = translation.contact;
+            document.querySelector('.about-header').textContent = translation.header;
+            document.querySelector('.name').textContent = translation.name;
+            document.querySelector('.role').textContent = translation.role;
             document.querySelector('.description').textContent = translation.description;
-
+            document.querySelector('.hire-me-button').textContent = translation.hireMe;
+        
             // Cambia la bandera y el texto del botón de idioma
             document.querySelector('#languageButton img').src = translation.flag;
             document.querySelector('#languageButton span').textContent = translation.lang;
-
+        
             // Guarda el idioma en localStorage
             localStorage.setItem('preferredLanguage', language);
-
+        
             // Cierra el menú de idiomas
             document.getElementById('languageMenu').classList.add('hidden');
         }
@@ -189,10 +216,16 @@
             document.getElementById('languageMenu').classList.toggle('hidden');
         });
 
+        // Muestra y oculta el menú de navegación en móviles
+        document.getElementById('menuButton').addEventListener('click', function() {
+            document.getElementById('menu').classList.toggle('hidden');
+        });
+
         // Cierra el menú si se hace clic fuera de él
         window.addEventListener('click', function(e) {
-            if (!document.getElementById('languageButton').contains(e.target)) {
+            if (!document.getElementById('languageButton').contains(e.target) && !document.getElementById('menuButton').contains(e.target)) {
                 document.getElementById('languageMenu').classList.add('hidden');
+                document.getElementById('menu').classList.add('hidden');
             }
         });
 
