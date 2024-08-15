@@ -5,6 +5,10 @@ const app = express();
 // Servir archivos estáticos
 app.use('/static', express.static(path.join(__dirname, 'static')));
 
+// Opcional: Servir el favicon directamente si está en una ubicación específica
+app.use('/favicon.ico', express.static(path.join(__dirname, 'static/images/favicon/favicon.ico')));
+
+
 const routes = require('./routes/routes');
 app.use('/', routes);
 

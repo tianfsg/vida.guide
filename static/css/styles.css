@@ -2,6 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Display setting */
+@media (max-width: 425px) {
+    /* Mobile styles */
+    .text-content {
+        font-size: 14px;
+        text-align: left;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Tablet styles */
+    .text-content {
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .md\:py-3 {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+
+
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    /* Small Desktop styles */
+    .text-content {
+        font-size: 18px;
+        text-align: justify;
+    }
+}
+
+@media (min-width: 1280px) {
+    /* Large Desktop styles */
+    .text-content {
+        font-size: 20px;
+        text-align: justify;
+    }
+}
+
+/* Base html setting */
+
+
 html,
 body {
     margin: 0;
@@ -11,7 +56,6 @@ body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     font-size: 14px;
-    /* Tamaño de fuente más pequeño para un estilo minimalista */
 }
 
 body {
@@ -29,6 +73,9 @@ body {
 }
 
 
+/* Nav decoration */
+
+
 nav .space-x-8 a {
     margin-left: 1rem;
     /* Ajustamos margen entre los enlaces para alinearlos mejor */
@@ -38,8 +85,6 @@ nav .space-x-8 a {
     color: #ffffff;
     /* Aseguramos que el texto sea blanco */
 }
-
-
 
 #languageMenu {
     margin-top: 0.25rem;
@@ -75,17 +120,8 @@ nav .space-x-8 a {
     /* Tamaño de la bandera ajustado */
 }
 
-.main-content {
-    flex: 1;
-    width: 100%;
-    margin: 0;
-    z-index: 2;
-}
 
-section {
-    margin-bottom: 4rem;
-    /* Añadimos más espacio entre las secciones */
-}
+/* basic template setting */
 
 h2 {
     font-size: 2rem;
@@ -98,6 +134,47 @@ p {
     line-height: 1.6;
 }
 
+.main-content {
+    flex: 1;
+    width: 100%;
+    margin: 0;
+    z-index: 2;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+#my-journey {
+    position: relative;
+    overflow: hidden;
+}
+
+#contact section{
+    margin-bottom: 0;
+}
+
+.education-item {
+    position: relative;
+    margin-bottom: 0.5rem;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.01); /* Slightly transparent background */
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item {
+    position: relative;
+    margin-bottom: 0.5rem;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.01); /* Slightly transparent background */
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer decoration */
 footer {
     background-color: #1a202c;
     padding: 3rem 2rem;
@@ -124,3 +201,5 @@ footer {
     background-size: cover;
     z-index: -1;
 }
+
+/*  */
