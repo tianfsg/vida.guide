@@ -3,23 +3,44 @@
 
 // Verificación de compatibilidad del <dialog>
 if (!window.HTMLDialogElement) {
-    document.getElementById('contactModal').style.display = 'none'; // Oculta el modal
-    // Aquí puedes implementar una alternativa, como un modal basado en CSS o JavaScript
-    alert('El navegador no soporta la etiqueta <dialog>. Considera actualizar tu navegador.');
+    var contactModal = document.getElementById('contactModal');
+    if (contactModal) {
+        contactModal.style.display = 'none'; // Oculta el modal
+        alert('El navegador no soporta la etiqueta <dialog>. Considera actualizar tu navegador.');
+    }
 }
 
-document.getElementById('languageButton').addEventListener('click', function() {
-    document.getElementById('languageMenu').classList.toggle('hidden');
-});
+// Toggle de menú de idioma
+var languageButton = document.getElementById('languageButton');
+if (languageButton) {
+    languageButton.addEventListener('click', function() {
+        var languageMenu = document.getElementById('languageMenu');
+        if (languageMenu) {
+            languageMenu.classList.toggle('hidden');
+        }
+    });
+}
 
-document.getElementById('menuButton').addEventListener('click', function() {
-    document.getElementById('menu').classList.toggle('hidden');
-});
+// Toggle de menú en dispositivos móviles
+var menuButton = document.getElementById('menuButton');
+if (menuButton) {
+    menuButton.addEventListener('click', function() {
+        var menu = document.getElementById('menu');
+        if (menu) {
+            menu.classList.toggle('hidden');
+        }
+    });
+}
 
+// Cerrar menús al hacer clic fuera
 window.addEventListener('click', function(e) {
-    if (!document.getElementById('languageButton').contains(e.target) && !document.getElementById('menuButton').contains(e.target)) {
-        document.getElementById('languageMenu').classList.add('hidden');
-        document.getElementById('menu').classList.add('hidden');
+    var languageMenu = document.getElementById('languageMenu');
+    var menu = document.getElementById('menu');
+
+    if (languageMenu && menu) {
+        if (!languageButton.contains(e.target) && !menuButton.contains(e.target)) {
+            languageMenu.classList.add('hidden');
+            menu.classList.add('hidden');
+        }
     }
 });
-

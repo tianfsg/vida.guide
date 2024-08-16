@@ -1,0 +1,109 @@
+{
+    "header": "Hi, Ich bin",
+    "name": "Sebastián Fco. Gutiérrez Rojas",
+    "role": "Softwareingenieur",
+    "description": "Spezialist für Big Data und Deep Learning. Ich liebe es, komplexe Probleme zu lösen und innovative Lösungen zu schaffen...",
+    "CV": "Vorschau Lebenslauf",
+    "talk": "Lass uns reden",
+    "lang": "DE",
+    "flag": "/static/images/flags/DE/24-3.png",
+    "menuHome": "Startseite",
+    "menuAbout": "Reise",
+    "menuSkills": "Fähigkeiten",
+    "menuPortfolio": "Portfolio",
+    "menuContact": "Kontakt",
+    "journeyTitle": "Meine Reise",
+    "educationTitle": "Bildung",
+    "experienceTitle": "Erfahrung",
+    "educationDetails": [
+        {
+            "title": "Softwaretechnik - U-tad",
+            "details": "Absolviert: 2024. Spezialisierung auf Big Data mit starken Fähigkeiten in der Full-Stack-Entwicklung, Cloud-Computing und verteilten Systemen."
+        }
+    ],
+    "experienceDetails": [
+        {
+            "title": "Produkt- und Servicentwickler - Worksync.ai",
+            "details": "Januar 2024 – Gegenwart. Entwicklung und Einführung einer KI-gestützten Chrome-Erweiterung zur Optimierung des Bewerbungsprozesses."
+        },
+        {
+            "title": "Professor für IOS - U-tad",
+            "details": "September 2023 – Gegenwart. Entwicklung und Bereitstellung von Kursmaterialien in Betriebssystemen und Förderung einer kollaborativen Lernumgebung."
+        },
+        {
+            "title": "Leiter der Webentwicklung und des Designs - Sleepzzone",
+            "details": "Juni 2022 – September 2022. Neugestaltung der Landingpage und der E-Commerce-Plattform des Unternehmens mit Webflow zur Verbesserung der Benutzererfahrung und der Funktionalität."
+        }
+    ],
+    "skillsTitle": "Meine Fähigkeiten",
+    "technicalSkills": "Technische Fähigkeiten",
+    "complementarySkills": "Ergänzende Fähigkeiten",
+    "technicalSkillsList": [
+        "Big Data & Verteilte Systeme",
+        "Deep Learning Frameworks",
+        "Datenverarbeitung & ETL",
+        "Cloud-Dienste & Orchestrierung"
+    ],
+    "complementarySkillsList": [
+        "Frontend- & Backend-Entwicklung",
+        "Datenbankverwaltung",
+        "Robotik & IoT",
+        "Software Engineering Praktiken"
+    ],
+    "contactTitle": "Kontaktieren Sie mich",
+    "contactDescription": "Zögern Sie nicht, mich per E-Mail zu kontaktieren oder in den sozialen Medien zu verbinden.",
+    "emailLabel": "E-Mail:",
+    "phoneLabel": "Telefon:",
+    "footerPrivacy": "Datenschutz",
+    "footerCookies": "Cookies",
+    "footerTerms": "Geschäftsbedingungen",
+    "footerLegal": "Rechtlicher Hinweis",
+    "footerSignature": "© 2024. Alle Rechte vorbehalten. Erstellt von Sebastián Fco. Gutiérrez Rojas.",
+    "cookies_policy": {
+        "title": "Cookie-Richtlinie",
+        "what_are_cookies": "Was sind Cookies?",
+        "what_are_cookies_details": "Cookies sind kleine Textdateien, die von Websites, die Sie besuchen, auf Ihrem Gerät abgelegt werden. Sie werden häufig verwendet, um Websites funktionsfähig zu machen oder effizienter zu gestalten sowie um Informationen an die Website-Eigentümer bereitzustellen.",
+        "how_we_use_cookies": "Wie wir Cookies verwenden",
+        "how_we_use_cookies_details": "Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern, indem wir uns Ihre Präferenzen und wiederholte Besuche merken. Sie helfen uns auch, den Website-Traffic und die Nutzung zu analysieren, um unsere Dienstleistungen zu verbessern.",
+        "types_of_cookies": "Arten von Cookies, die wir verwenden",
+        "types_of_cookies_details": "Wir verwenden sowohl Sitzungscookies, die ablaufen, wenn Sie Ihren Browser schließen, als auch dauerhafte Cookies, die auf Ihrem Gerät bleiben, bis sie ablaufen oder Sie sie löschen. Einige Cookies sind für die Funktion unserer Website erforderlich, während andere für Analyse- und Werbezwecke verwendet werden.",
+        "your_choices": "Ihre Wahlmöglichkeiten bezüglich Cookies",
+        "your_choices_details": "Sie können Cookies über Ihre Browsereinstellungen akzeptieren oder ablehnen. Das Deaktivieren von Cookies kann jedoch Ihre Erfahrung auf unserer Website beeinträchtigen.",
+        "contact_us": "Kontaktieren Sie uns",
+        "contact_us_details": "Wenn Sie Fragen zu unserer Cookie-Richtlinie haben, kontaktieren Sie uns bitte unter <a href=\"mailto:contact@vida.guide\" class=\"text-yellow-400\">contact@vida.guide</a>."
+    },
+    "legal_notice": {
+        "title": "Rechtlicher Hinweis",
+        "content": "Dieser rechtliche Hinweis regelt die Nutzung der Website Vida Guide. Durch den Zugriff auf unsere Website akzeptieren Sie die Bedingungen dieses Hinweises. Wir behalten uns das Recht vor, diese Bedingungen jederzeit zu ändern, und es liegt in Ihrer Verantwortung, diese regelmäßig zu überprüfen.",
+        "website_owner": "Eigentümer der Website",
+        "website_owner_details": "Die Website <strong>Vida Guide</strong> wird von [Ihr Firmenname] betrieben, der sich unter folgender Adresse befindet: [Ihre Adresse]. Sie können uns unter <a href=\"mailto:contact@vida.guide\" class=\"text-yellow-400\">contact@vida.guide</a> kontaktieren.",
+        "disclaimer": "Haftungsausschluss",
+        "disclaimer_details": "Der Inhalt dieser Website wird 'wie besehen' ohne jegliche Gewährleistungen bereitgestellt. Vida Guide übernimmt keine Garantie für die Genauigkeit oder Vollständigkeit des Inhalts und lehnt jegliche Haftung für Fehler oder Auslassungen ab.",
+        "governing_law": "Anwendbares Recht",
+        "governing_law_details": "Dieser rechtliche Hinweis unterliegt dem Recht von [Ihrer Gerichtsbarkeit] und wird nach diesem ausgelegt. Alle Streitigkeiten im Zusammenhang mit diesem Hinweis unterliegen der ausschließlichen Zuständigkeit der Gerichte von [Ihrer Gerichtsbarkeit]."
+    },
+    "terms_and_conditions": {
+        "title": "Geschäftsbedingungen",
+        "content": "Willkommen bei Vida Guide. Durch den Zugriff auf oder die Nutzung unserer Website erklären Sie sich mit diesen Geschäftsbedingungen einverstanden. Wenn Sie nicht einverstanden sind, nutzen Sie unsere Website bitte nicht.",
+        "use_of_site": "Nutzung der Website",
+        "use_of_site_details": "Sie verpflichten sich, die Website nur zu rechtmäßigen Zwecken zu nutzen. Sie dürfen unsere Website nicht in einer Weise nutzen, die Schäden an der Website verursacht oder die Verfügbarkeit oder Zugänglichkeit der Website beeinträchtigt.",
+        "intellectual_property": "Geistiges Eigentum",
+        "intellectual_property_details": "Alle Inhalte dieser Website, einschließlich Texte, Grafiken, Logos und Bilder, sind Eigentum von Vida Guide oder seiner Inhaltslieferanten und durch geistige Eigentumsrechte geschützt.",
+        "limitation_of_liability": "Haftungsbeschränkung",
+        "limitation_of_liability_details": "Vida Guide haftet nicht für direkte, indirekte, zufällige oder Folgeschäden, die sich aus der Nutzung unserer Website ergeben.",
+        "changes_to_terms": "Änderungen dieser Bedingungen",
+        "changes_to_terms_details": "Wir behalten uns das Recht vor, diese Geschäftsbedingungen jederzeit ohne vorherige Ankündigung zu aktualisieren oder zu ändern. Ihre fortgesetzte Nutzung der Website stellt die Annahme dieser Änderungen dar."
+    },
+    "privacy_policy": {
+        "title": "Datenschutzrichtlinie",
+        "content": "Bei Vida Guide verpflichten wir uns, Ihre Privatsphäre zu schützen. Diese Datenschutzrichtlinie erklärt, wie wir Ihre Informationen sammeln, verwenden und schützen, wenn Sie unsere Website besuchen.",
+        "information_we_collect": "Informationen, die wir sammeln",
+        "information_we_collect_details": "Wir können persönliche Informationen wie Ihren Namen, Ihre E-Mail-Adresse und andere Kontaktdaten sammeln, wenn Sie ein Formular auf unserer Website ausfüllen. Darüber hinaus sammeln wir nicht-personenbezogene Informationen über Cookies und ähnliche Technologien.",
+        "how_we_use_information": "Wie wir Ihre Informationen verwenden",
+        "how_we_use_information_details": "Wir verwenden Ihre Informationen, um unsere Dienstleistungen bereitzustellen, zu pflegen und zu verbessern, mit Ihnen zu kommunizieren und unsere Website vor unbefugtem Zugriff oder Nutzung zu schützen.",
+        "cookies": "Cookies",
+        "cookies_details": "Unsere Website verwendet Cookies, um Ihre Erfahrung zu verbessern. Cookies sind kleine Datendateien, die auf Ihrem Gerät gespeichert werden und uns helfen, zu verstehen, wie Sie mit unserer Website interagieren.",
+        "your_rights": "Ihre Rechte",
+        "your_rights_details": "Sie haben das Recht, jederzeit auf Ihre persönlichen Informationen zuzugreifen, diese zu korrigieren oder zu löschen. Bitte kontaktieren Sie uns, wenn Sie diese Rechte ausüben möchten."
+    }
+}

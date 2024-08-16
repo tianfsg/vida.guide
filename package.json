@@ -4,8 +4,7 @@
   "main": "tailwind.config.js",
   "scripts": {
     "build:css": "tailwindcss -i ./static/css/styles.css -o ./static/css/output.css --watch",
-    "start": "npm --scripts-prepend-node-path=auto run build:css",
-    "test": "echo \"No tests available\""
+    "start": "npm run build:css && node app.js"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +18,7 @@
   },
   "dependencies": {
     "ejs": "^3.1.10",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "i18n": "^0.15.1"
   }
 }
