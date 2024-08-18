@@ -1,0 +1,5 @@
+# Ignorar archivos .DS_Store que son creados automáticamente por macOS
+.DS_Store
+
+# Ignorar el directorio "diseños previos" en la raíz del proyecto
+/diseños previos/
