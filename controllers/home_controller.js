@@ -1,31 +1,47 @@
 const path = require('path');
 
 exports.getHome = (req, res) => {
-    res.sendFile(path.join(__dirname, '/index.html'));
+    console.log('Rendering Home Page');
+    res.render('index', {
+        t: res.__,
+        language: req.getLocale(),
+    });
 };
 
 exports.getPrivacyPolicy = (req, res) => {
-    res.sendFile(path.join(__dirname, '/privacy.html'));
+    console.log('Rendering Privacy Policy Page');
+    res.render('privacy', {
+        t: res.__,
+        language: req.getLocale(),
+    });
 };
 
 exports.getCookiesPolicy = (req, res) => {
-    res.sendFile(path.join(__dirname, '/cookies.html'));
+    console.log('Rendering Cookies Policy Page');
+    res.render('cookies', {
+        t: res.__,
+        language: req.getLocale(),
+    });
 };
 
 exports.getTermsAndConditions = (req, res) => {
-    res.sendFile(path.join(__dirname, '/terms.html'));
+    console.log('Rendering Terms and Conditions Page');
+    res.render('terms', {
+        t: res.__,
+        language: req.getLocale(),
+    });
 };
 
 exports.getLegalNotice = (req, res) => {
-    res.sendFile(path.join(__dirname, '/legal-notice.html'));
+    console.log('Rendering Legal Notice Page');
+    res.render('legal-notice', {
+        t: res.__,
+        language: req.getLocale(),
+    });
 };
 
 exports.postContactForm = (req, res) => {
     const { name, email, message } = req.body;
-
-    // Lógica para manejar el formulario de contacto, por ejemplo, enviar un correo o guardar en la base de datos.
-    // Ejemplo básico de respuesta:
     console.log(`Received contact form from ${name} (${email}): ${message}`);
-    
     res.status(200).json({ message: 'Thank you for contacting us! We will get back to you soon.' });
 };

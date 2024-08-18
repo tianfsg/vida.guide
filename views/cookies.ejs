@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="<%= language %>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= t('cookiesTitle') %> | ViDa Guide</title>
+    <link href="/static/css/output.css" rel="stylesheet">
+</head>
+<body class="gradient-background text-white">
+    <header class="fixed top-0 left-0 w-full z-30 bg-gray-900 bg-opacity-90 flex justify-between items-center p-4 shadow-lg">
+        <div class="text-3xl font-bold">ViDa.guide</div>
+        <nav id="menu" class="hidden md:flex flex-1 justify-center space-x-8" role="navigation">
+            <a href="/#home" class="hover:text-gray-300" aria-label="Home Section"><%= t('menuHome') %></a>
+            <a href="/#journey" class="hover:text-gray-300" aria-label="About Section"><%= t('menuAbout') %></a>
+            <a href="/#my-skills" class="hover:text-gray-300" aria-label="Skills Section"><%= t('menuSkills') %></a>
+            <a href="/#contact" class="hover:text-gray-300" aria-label="Contact Section"><%= t('menuContact') %></a>
+        </nav>
+    </header>
+    
+    <main class="pt-48 px-4">
+        <section class="max-w-5xl mx-auto p-8 bg-gray-900 bg-opacity-80 rounded-lg shadow-lg">
+            <h1 id="cookiesTitle" class="text-4xl font-bold mb-6"><%= t('cookiesTitle') %></h1>
+            <h2 id="whatAreCookies" class="text-2xl font-semibold mb-2"><%= t('whatAreCookies') %></h2>
+            <p id="whatAreCookiesDetails" class="mb-4"><%= t('whatAreCookiesDetails') %></p>
+
+            <h2 id="howWeUseCookies" class="text-2xl font-semibold mb-2"><%= t('howWeUseCookies') %></h2>
+            <p id="howWeUseCookiesDetails" class="mb-4"><%= t('howWeUseCookiesDetails') %></p>
+
+            <h2 id="typesOfCookies" class="text-2xl font-semibold mb-2"><%= t('typesOfCookies') %></h2>
+            <p id="typesOfCookiesDetails" class="mb-4"><%= t('typesOfCookiesDetails') %></p>
+
+            <h2 id="yourChoices" class="text-2xl font-semibold mb-2"><%= t('yourChoices') %></h2>
+            <p id="yourChoicesDetails" class="mb-4"><%= t('yourChoicesDetails') %></p>
+
+            <h2 id="contactUs" class="text-2xl font-semibold mb-2"><%= t('contactUs') %></h2>
+            <p id="contactUsDetails"><%= t('contactUsDetails') %> <a href="mailto:contact@vida.guide" class="text-yellow-400">contact@vida.guide</a>.</p>
+        </section>
+    </main>
+    
+    <footer class="bg-gray-900 text-gray-400 py-12 px-6 text-center shadow-md">
+        <p><%= t('footerSignature') %></p>
+    </footer>
+    
+    <script src="/static/js/language.js" defer></script>
+</body>
+</html>

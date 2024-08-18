@@ -19,7 +19,7 @@ function safeGetLocalStorage(key, defaultValue) {
     }
 }
 // Función para establecer el idioma
-window.setLanguage = function(lang) {
+window.setLanguage = function (lang) {
     const supportedLanguages = ['en', 'es', 'de'];
     if (!supportedLanguages.includes(lang)) lang = 'en';
 
@@ -39,7 +39,7 @@ window.setLanguage = function(lang) {
                 document.querySelector('[aria-label="Home Section"]').textContent = translation.menuHome;
                 document.querySelector('[aria-label="About Section"]').textContent = translation.menuAbout;
                 document.querySelector('[aria-label="Skills Section"]').textContent = translation.menuSkills;
-                document.querySelector('[aria-label="Portfolio Section"]').textContent = translation.menuPortfolio;
+                // document.querySelector('[aria-label="Portfolio Section"]').textContent = translation.menuPortfolio;
                 document.querySelector('[aria-label="Contact Section"]').textContent = translation.menuContact;
 
                 document.querySelector('#my-journey h2').textContent = translation.journeyTitle;

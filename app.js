@@ -1,41 +1,58 @@
 const express = require('express');
+const i18n = require('i18n');
 const path = require('path');
-const i18n = require('i18n');  // Importar i18n
-const routes = require('./routes/routes');
-
+const fs = require('fs');
+const axios = require('axios'); // Reemplaza node-fetch por axios
+require('dotenv').config(); // Cargar las variables de entorno desde .env
+const routes = require('./routes/routes.js');
 const app = express();
+
+// Importa tus rutas
+
+// Usa las rutas
 
 // Configuración de i18n
 i18n.configure({
-    locales: ['en', 'es'],  // Idiomas soportados
-    directory: path.join(__dirname, 'static/locales'),  // Carpeta donde se almacenan las traducciones
-    defaultLocale: 'en',  // Idioma por defecto
-    cookie: 'lang',  // Nombre de la cookie que almacena el idioma seleccionado
-    queryParameter: 'lang',  // Parámetro en la URL para cambiar el idioma
-    autoReload: true,  // Recargar automáticamente los archivos de traducción si se modifican
-    syncFiles: true,  // Crear archivos de traducción si no existen
-    objectNotation: true  // Permite la notación de objetos en las claves de traducción
+  locales: ['en', 'es', 'de'],  
+  directory: path.join(__dirname, 'static/lang'),  
+  defaultLocale: 'en',
+  cookie: 'lang', 
+  queryParameter: 'lang',
+  autoReload: false,  
+  syncFiles: false, 
+  updateFiles: false, 
+  objectNotation: true
 });
 
 // Middleware de i18n
-app.use(i18n.init);  // Inicializar i18n en la aplicación
+app.use(i18n.init);
 
-// Middleware para parsear el cuerpo de las solicitudes
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-// Middleware para servir archivos estáticos
+// Configurar express.static para servir archivos estáticos desde la carpeta "static"
 app.use('/static', express.static(path.join(__dirname, 'static')));
-
-// Usar las rutas definidas
 app.use('/', routes);
 
-// Manejo de errores 404
-app.use((req, res, next) => {
-    res.status(404).sendFile(path.join(__dirname, 'views/templates/404.html'));
+// Middleware adicional
+// app.use(express.urlencoded({ extended: true }));
+// app.use(express.json());
+
+// Configuración del motor de plantillas
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+// Ruta principal
+app.get('/', (req, res) => {
+  res.render('index', {
+      t: res.__,  // Alias de `__` para `t`
+      language: req.getLocale(),
+  });
 });
 
-// Iniciar el servidor
-app.listen(8060, () => {
-    console.log('Server is running on http://localhost:8060');
+if (!process.env.HCAPTCHA_SECRET) {
+    throw new Error('HCAPTCHA_SECRET no está definido en .env');
+}
+
+// Servidor
+const PORT = process.env.PORT || 8060;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });

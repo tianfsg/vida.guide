@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="<%= language %>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= t('terms_and_conditions.title') %> | ViDa Guide</title>
+    <link href="/static/css/output.css" rel="stylesheet">
+</head>
+<body class="gradient-background text-white">
+    <header class="fixed top-0 left-0 w-full z-30 bg-gray-900 bg-opacity-90 flex justify-between items-center p-4 shadow-lg">
+        <div class="text-3xl font-bold">ViDa.guide</div>
+        <nav id="menu" class="hidden md:flex flex-1 justify-center space-x-8" role="navigation">
+            <a href="/#home" class="hover:text-gray-300" aria-label="Home Section"><%= t('menuHome') %></a>
+            <a href="/#journey" class="hover:text-gray-300" aria-label="About Section"><%= t('menuAbout') %></a>
+            <a href="/#my-skills" class="hover:text-gray-300" aria-label="Skills Section"><%= t('menuSkills') %></a>
+            <a href="/#contact" class="hover:text-gray-300" aria-label="Contact Section"><%= t('menuContact') %></a>
+        </nav>
+    </header>
+    
+    <main class="pt-48 px-4">
+        <section class="max-w-5xl mx-auto p-8 bg-gray-900 bg-opacity-80 rounded-lg shadow-lg">
+            <h1 id="termsTitle" class="text-4xl font-bold mb-6"><%= t('terms_and_conditions.title') %></h1>
+            <p id="termsContent" class="mb-4"><%= t('terms_and_conditions.content') %></p>
+
+            <h2 id="useOfSite" class="text-2xl font-semibold mb-2"><%= t('terms_and_conditions.use_of_site') %></h2>
+            <p id="useOfSiteDetails" class="mb-4"><%= t('terms_and_conditions.use_of_site_details') %></p>
+
+            <h2 id="intellectualProperty" class="text-2xl font-semibold mb-2"><%= t('terms_and_conditions.intellectual_property') %></h2>
+            <p id="intellectualPropertyDetails" class="mb-4"><%= t('terms_and_conditions.intellectual_property_details') %></p>
+
+            <h2 id="limitationOfLiability" class="text-2xl font-semibold mb-2"><%= t('terms_and_conditions.limitation_of_liability') %></h2>
+            <p id="limitationOfLiabilityDetails" class="mb-4"><%= t('terms_and_conditions.limitation_of_liability_details') %></p>
+
+            <h2 id="changesToTerms" class="text-2xl font-semibold mb-2"><%= t('terms_and_conditions.changes_to_terms') %></h2>
+            <p id="changesToTermsDetails" class="mb-4"><%= t('terms_and_conditions.changes_to_terms_details') %></p>
+        </section>
+    </main>
+    
+    <footer class="bg-gray-900 text-gray-400 py-12 px-6 text-center shadow-md">
+        <p id="footerSignature"><%= t('footerSignature') %></p>
+    </footer>
+    
+    <script src="/static/js/language.js" defer></script>
+</body>
+</html>

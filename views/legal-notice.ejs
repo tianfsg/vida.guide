@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="<%= language %>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= t('legal_notice.title') %> | ViDa Guide</title>
+    <link href="/static/css/output.css" rel="stylesheet">
+</head>
+<body class="gradient-background text-white">
+    <header class="fixed top-0 left-0 w-full z-30 bg-gray-900 bg-opacity-90 flex justify-between items-center p-4 shadow-lg">
+        <div class="text-3xl font-bold">ViDa.guide</div>
+        <nav id="menu" class="hidden md:flex flex-1 justify-center space-x-8" role="navigation">
+            <a href="/#home" class="hover:text-gray-300" aria-label="Home Section"><%= t('menuHome') %></a>
+            <a href="/#journey" class="hover:text-gray-300" aria-label="About Section"><%= t('menuAbout') %></a>
+            <a href="/#my-skills" class="hover:text-gray-300" aria-label="Skills Section"><%= t('menuSkills') %></a>
+            <a href="/#contact" class="hover:text-gray-300" aria-label="Contact Section"><%= t('menuContact') %></a>
+        </nav>
+    </header>
+    
+    <main class="pt-48 px-4">
+        <section class="max-w-5xl mx-auto p-8 bg-gray-900 bg-opacity-80 rounded-lg shadow-lg">
+            <h1 id="legalNoticeTitle" class="text-4xl font-bold mb-6"><%= t('legal_notice.title') %></h1>
+            <p id="legalNoticeContent" class="mb-4"><%= t('legal_notice.content') %></p>
+
+            <h2 id="websiteOwner" class="text-2xl font-semibold mb-2"><%= t('legal_notice.website_owner') %></h2>
+            <p id="websiteOwnerDetails" class="mb-4"><%= t('legal_notice.website_owner_details') %></p>
+
+            <h2 id="disclaimer" class="text-2xl font-semibold mb-2"><%= t('legal_notice.disclaimer') %></h2>
+            <p id="disclaimerDetails" class="mb-4"><%= t('legal_notice.disclaimer_details') %></p>
+
+            <h2 id="governingLaw" class="text-2xl font-semibold mb-2"><%= t('legal_notice.governing_law') %></h2>
+            <p id="governingLawDetails" class="mb-4"><%= t('legal_notice.governing_law_details') %></p>
+        </section>
+    </main>
+    
+    <footer class="bg-gray-900 text-gray-400 py-12 px-6 text-center shadow-md">
+        <p id="footerSignature"><%= t('footerSignature') %></p>
+    </footer>
+    
+    <script src="/static/js/language.js" defer></script>
+</body>
+</html>

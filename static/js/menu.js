@@ -13,7 +13,7 @@ if (!window.HTMLDialogElement) {
 // Toggle de menú de idioma
 var languageButton = document.getElementById('languageButton');
 if (languageButton) {
-    languageButton.addEventListener('click', function() {
+    languageButton.addEventListener('click', function () {
         var languageMenu = document.getElementById('languageMenu');
         if (languageMenu) {
             languageMenu.classList.toggle('hidden');
@@ -24,7 +24,7 @@ if (languageButton) {
 // Toggle de menú en dispositivos móviles
 var menuButton = document.getElementById('menuButton');
 if (menuButton) {
-    menuButton.addEventListener('click', function() {
+    menuButton.addEventListener('click', function () {
         var menu = document.getElementById('menu');
         if (menu) {
             menu.classList.toggle('hidden');
@@ -33,11 +33,11 @@ if (menuButton) {
 }
 
 // Cerrar menús al hacer clic fuera
-window.addEventListener('click', function(e) {
+window.addEventListener('click', function (e) {
     var languageMenu = document.getElementById('languageMenu');
     var menu = document.getElementById('menu');
 
-    if (languageMenu && menu) {
+    if (languageButton && menuButton && languageMenu && menu) {
         if (!languageButton.contains(e.target) && !menuButton.contains(e.target)) {
             languageMenu.classList.add('hidden');
             menu.classList.add('hidden');

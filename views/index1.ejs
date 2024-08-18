@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="<%= language %>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= t('title') %></title>
+    <link rel="stylesheet" href="/static/css/output.css">
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+</head>
+<body>
+    <h1><%= t('Welcome to my CV Page') %></h1>
+
+    <!-- Formulario con hCaptcha para descargar el CV -->
+    <form action="/download-cv" method="POST">
+        <!-- hCaptcha widget -->
+        <div class="h-captcha" data-sitekey="8d4cb0dc-2f74-414c-99b0-77aa9f0615cc"></div>
+
+        <!-- Botón de descarga del CV -->
+        <button type="submit">Descargar CV</button>
+    </form>
+</body>
+</html>
